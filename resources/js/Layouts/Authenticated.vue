@@ -18,6 +18,9 @@
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </BreezeNavLink>
+                                <BreezeNavLink :href="route('qrcode')" :active="route().current('qrcode')">
+                                    Qr-Code
+                                </BreezeNavLink>
                             </div>
                         </div>
 

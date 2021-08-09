@@ -28,4 +28,13 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/qrcode', function () {
+    return Inertia::render('QrCodeGenerator');
+})->middleware(['auth', 'verified'])->name('qrcode');
+
+Route::post(
+    '/generate', 'App\Http\Controllers\QrCodeController@generate'
+)->middleware(['auth', 'verified'])->name('generate');
+
+
 require __DIR__.'/auth.php';

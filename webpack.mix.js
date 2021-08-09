@@ -18,6 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('autoprefixer'),
     ])
+    .copy('node_modules/qrcodejs/qrcode.min.js', 'public/js')
     .webpackConfig(require('./webpack.config'));
 
 if (mix.inProduction()) {
